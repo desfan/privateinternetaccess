@@ -31,6 +31,10 @@
     .main-thumbnail__title {
         margin-bottom: 44px;
     }
+
+    .registration__card {
+        padding: 48px 30px 40px 30px;
+    }
 }
 
 // ≥1100px
@@ -456,17 +460,22 @@
 
     .price {
         font-size: 27px;
+        &::before {
+            left: 5px;
+            top: 10px;
+            font-size: 18px;
+            line-height: 1;
+        }
+        &::after {
+            right: 10px;
+            bottom: 10px;
+            font-size: 18px;
+            line-height: 1;
+        }
     }
 
-    .currency {
-        position: absolute;
-        left: 5px;
-        top: 8px;
-        font-size: 18px;
-    }
-
-    .term {
-        font-size: 18px;
+    .registration__price {
+        min-width: auto;
     }
 
     .registration__price::after {
@@ -555,19 +564,21 @@
         padding-bottom: 5px;
     }
 
-    .currency {
-        font-size: 24px;
-        left: -3px;
-        top: 19px;
-    }
-
     .price {
         font-size: 56px;
         padding-left: 16px;
-    }
-
-    .term {
-        font-size: 24px;
+        &::before {
+            left: -5px;
+            top: 20px;
+            font-size: 32px;
+            line-height: 1;
+        }
+        &::after {
+            right: -15px;
+            bottom: 22px;
+            font-size: 32px;
+            line-height: 1;
+        }
     }
 
     .registration__wrapper {

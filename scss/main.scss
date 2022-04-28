@@ -831,7 +831,7 @@ a {
 
 .registration-cards {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	gap: 20px;
 	max-width: 1180px;
@@ -880,8 +880,11 @@ a {
 
 .registration__price {
 	position: relative;
-	max-width: 176px;
+	min-width: 176px;
 	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
 
 	&::after {
 		content: '';
@@ -896,34 +899,34 @@ a {
 	}
 }
 
-.currency,
-.term {
-	font-family: 'Roboto Light', sans-serif;
-	font-size: 24px;
-	line-height: 32px;
-	color: #22252e;
-}
-
-.currency {
-	position: absolute;
-	left: 0;
-	top: 20px;
-}
-
 .price {
+	position: relative;
 	font-family: 'Roboto Light', sans-serif;
 	font-size: 56px;
 	letter-spacing: -0.03em;
 	color: #22252e;
 	padding-left: 20px;
-	padding-right: 2px;
-}
-
-.term {
-	font-family: 'Roboto Light', sans-serif;
-	font-size: 24px;
-	line-height: 32px;
-	color: #22252e;
+	padding-right: 50px;
+	&::before {
+		position: absolute;
+		content: '$';
+		left: 0;
+		top: 20px;
+		font-family: 'Roboto Light', sans-serif;
+		font-size: 24px;
+		line-height: 32px;
+		color: #22252e;
+	}
+	&::after {
+		position: absolute;
+		content: '/mo.';
+		right: 0;
+		bottom: 20px;
+		font-family: 'Roboto Light', sans-serif;
+		font-size: 24px;
+		line-height: 32px;
+		color: #22252e;
+	}
 }
 
 .registration__feautures {
